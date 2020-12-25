@@ -4,7 +4,7 @@ function Home() {
   return (
     <>
       <p>Home</p>
-      <SimpleClock />
+      <SimpleClock label='Time:' />
     </>
 
   );

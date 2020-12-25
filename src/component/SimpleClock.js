@@ -1,6 +1,6 @@
 import react from 'react';
 
-function SimpleClock() {
+function SimpleClock(props) {
   const [time, setTime] = react.useState(getTime());
 
   react.useEffect(
@@ -12,7 +12,7 @@ function SimpleClock() {
       return () => {
         clearInterval(updateTime);
       }
-    });
+    }, []);
 
   function getTime() {
     let date = new Date();
@@ -20,7 +20,7 @@ function SimpleClock() {
   }
 
   return (
-    <h4>{time}</h4>
+    <h4>{props.label ? (props.label + ' ') : ''}{time}</h4>
   );
 }
 
