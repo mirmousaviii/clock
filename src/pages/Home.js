@@ -1,6 +1,12 @@
+import SimpleClock from "../component/SimpleClock";
+
 function Home() {
   return (
-    <p>Home</p>
+    <>
+      <p>Home</p>
+      <SimpleClock />
+    </>
+
   );
 }
 
