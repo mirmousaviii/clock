@@ -1,19 +1,23 @@
 import react from 'react';
 
 function SimpleClock() {
-  const [time, setTime] = react.useState('00:00:00');
+  const [time, setTime] = react.useState(getTime());
 
   react.useEffect(
     () => {
       let updateTime = setInterval(() => {
-        let date = new Date();
-        setTime(`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
+        setTime(getTime());
       }, 1000)
 
-      return ()=>{
+      return () => {
         clearInterval(updateTime);
       }
     });
+
+  function getTime() {
+    let date = new Date();
+    return `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+  }
 
   return (
     <h4>{time}</h4>
