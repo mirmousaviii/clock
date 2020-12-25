@@ -5,10 +5,14 @@ function SimpleClock() {
 
   react.useEffect(
     () => {
-      setInterval(() => {
+      let updateTime = setInterval(() => {
         let date = new Date();
         setTime(`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
       }, 1000)
+
+      return ()=>{
+        clearInterval(updateTime);
+      }
     });
 
   return (
