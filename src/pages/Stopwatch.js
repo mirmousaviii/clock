@@ -33,21 +33,17 @@ function Stopwatch() {
   }
 
   function timeStyle(time) {
-    let timeText;
-    if(time >= 100){
-      time = time.toString();
-      timeText = time.slice(0 , time.length - 2) +
-        '.' +
-      time.toString().slice(time.length - 2 , time.length) ;
-    } else {
-      if(time >= 10) {
-        timeText = '0.' + time;
-      } else {
-        timeText = '0.0' + time;
-      }
+    time = time.toString();
+
+    while (time.length < 4) {
+      time = '0' + time;
     }
 
-    return timeText;
+    time = time.slice(0, time.length - 2) +
+      '.' +
+      time.toString().slice(time.length - 2, time.length);
+
+    return time;
   }
 
   return (
