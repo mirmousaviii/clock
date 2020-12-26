@@ -1,11 +1,11 @@
-import react from 'react';
+import React from 'react';
 
 function Stopwatch() {
-  const [time, setTime] = react.useState(0);
-  const [isStart, setIsStart] = react.useState(false);
-  const updateTime = react.useRef();
+  const [time, setTime] = React.useState(0);
+  const [isStart, setIsStart] = React.useState(false);
+  const updateTime = React.useRef();
 
-  react.useEffect(() => {
+  React.useEffect(() => {
 
     return () => {
       clearInterval(updateTime.current);

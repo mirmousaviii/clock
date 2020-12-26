@@ -1,9 +1,9 @@
-import react from 'react';
+import React from 'react';
 
 function SimpleClock(props) {
-  const [time, setTime] = react.useState(getTime());
+  const [time, setTime] = React.useState(getTime());
 
-  react.useEffect(
+  React.useEffect(
     () => {
       let updateTime = setInterval(() => {
         setTime(getTime());
