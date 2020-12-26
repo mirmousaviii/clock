@@ -1,10 +1,12 @@
 import SimpleClock from "../component/SimpleClock";
+import ProClock from "../component/ProClock";
 
 function Home() {
   return (
     <>
       <p>Home</p>
-      <SimpleClock label='Time:' />
+      <SimpleClock />
+      <ProClock />
     </>
 
   );
