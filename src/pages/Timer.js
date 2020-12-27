@@ -7,6 +7,18 @@ function Timer() {
   const [time, setTime] = React.useState("00:00:00");
   const countDownInterval = React.useRef();
 
+  // React.useEffect(() => {
+  //   console.log('Start');
+  //
+  //   return () => {
+  //     console.log('Exit');
+  //   }
+  // },[]);
+  //
+  // React.useEffect(() => {
+  //   console.log('Update');
+  // });
+
   function addTime() {
     let newTime = moment()
       .startOf('day')

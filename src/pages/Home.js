@@ -1,13 +1,13 @@
 import SimpleClock from "../component/SimpleClock";
 import ProClock from "../component/ProClock";
 
+
 function Home() {
   return (
-    <>
-      <p>Home</p>
+    <span>
       <SimpleClock />
       <ProClock />
-    </>
+    </span>
 
   );
 }
