@@ -7,6 +7,7 @@ function Nav() {
       <li><Link to='/timer'>Timer</Link></li>
       <li><Link to='/stopwatch'>Stopwatch</Link></li>
       <li><Link to='/alarm'>Alarm</Link></li>
+      <li><Link to='/world-time'>WorldTime</Link></li>
     </ul>
   );
 }
