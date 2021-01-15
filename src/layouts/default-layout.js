@@ -1,10 +1,12 @@
 import {Layout, Typography} from 'antd';
 import Nav from '../components/Nav';
+import routes from '../routes';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 const {Header, Footer, Content} = Layout;
 const {Link} = Typography;
 
-let DefaultLayout = ({children}) => {
+let DefaultLayout = () => {
 
   return (
       <Layout>
@@ -13,7 +15,10 @@ let DefaultLayout = ({children}) => {
           <Nav/>
         </Header>
         <Content className="site-layout-content">
-          {children}
+          {routes.map((route, index) => (
+                  <Route {...route} key={index}/>
+              )
+          )}
         </Content>
         <Footer style={{textAlign: 'center'}}>©2020 Simple Clock</Footer>
       </Layout>

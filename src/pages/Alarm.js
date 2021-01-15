@@ -15,12 +15,12 @@ function Alarm() {
 
 
   return (
-      <DefaultLayout>
+      <>
         <h2>Alarm</h2>
         <input value={hour} type="number" min={0} max={23}/>
         <input value={minute} type="number" min={0} max={59}/>
         <button>Set Alarm</button>
-      </DefaultLayout>
+      </>
   );
 }
 

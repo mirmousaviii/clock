@@ -5,9 +5,7 @@ import DefaultLayout from '../layouts/default-layout';
 function Home() {
 
   return (
-      <DefaultLayout>
         <SimpleClock/>
-      </DefaultLayout>
   );
 }
 

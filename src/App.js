@@ -1,15 +1,13 @@
 import './App.css';
-import {BrowserRouter as Router, Route} from "react-router-dom";
-import routes from './routes'
+import {BrowserRouter as Router} from 'react-router-dom';
+import DefaultLayout from './layouts/default-layout';
 
 function App() {
   return (
-    <Router>
-      {routes.map((route, index) => (
-          <Route {...route} key={index}/>
-        )
-      )}
-    </Router>
+      <Router>
+        <DefaultLayout/>
+        {/*  TODO: Add route for auth pages*/}
+      </Router>
   );
 }
 

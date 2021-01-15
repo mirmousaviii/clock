@@ -48,13 +48,13 @@ function Stopwatch() {
   }
 
   return (
-      <DefaultLayout>
+      <>
         <p>Stopwatch</p>
         <h4>{timeStyle(time)}</h4>
         <button onClick={start}>Start</button>
         <button onClick={stop}>Stop</button>
         <button onClick={reset}>Reset</button>
-      </DefaultLayout>
+      </>
   );
 }
 

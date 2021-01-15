@@ -50,7 +50,7 @@ function Timer() {
   }
 
   return (
-      <DefaultLayout>
+      <>
         <p>Timer</p>
         <label>
           Minute:
@@ -69,7 +69,7 @@ function Timer() {
         <button onClick={start}>Start</button>
         <button onClick={pause}>Pause</button>
 
-      </DefaultLayout>
+      </>
   );
 }
 

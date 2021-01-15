@@ -50,13 +50,13 @@ class Counter extends React.Component {
 
   render() {
     return (
-        <DefaultLayout>
+        <>
           <h4>Counter</h4>
           <h4>Number: {this.state.number}</h4>
           <h4>Counter: {this.state.counter}</h4>
           <button onClick={this.plus}>+</button>
           <button onClick={this.mines}>-</button>
-        </DefaultLayout>
+        </>
     );
   }
 }

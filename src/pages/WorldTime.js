@@ -21,7 +21,7 @@ function WorldTime() {
   );
 
   return (
-      <DefaultLayout>
+      <>
         <h2>World Time</h2>
 
         <h3>{mainTime} <small>(Local time)</small></h3>
@@ -32,7 +32,7 @@ function WorldTime() {
                    setTimezone(e.target.value);
                  }}/>
         </h3>
-      </DefaultLayout>
+      </>
   );
 
 }
