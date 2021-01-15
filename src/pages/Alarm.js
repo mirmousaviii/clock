@@ -1,5 +1,6 @@
 import React from "react";
 import moment from "moment";
+import DefaultLayout from '../layouts/default-layout';
 
 function Alarm() {
   const [hour, setHour] = React.useState(0);
@@ -14,12 +15,12 @@ function Alarm() {
 
 
   return (
-    <span>
-      <h2>Alarm</h2>
-      <input value={hour} type="number" min={0} max={23}/>
-      <input value={minute} type="number" min={0} max={59}/>
-      <button>Set Alarm</button>
-    </span>
+      <DefaultLayout>
+        <h2>Alarm</h2>
+        <input value={hour} type="number" min={0} max={23}/>
+        <input value={minute} type="number" min={0} max={59}/>
+        <button>Set Alarm</button>
+      </DefaultLayout>
   );
 }
 

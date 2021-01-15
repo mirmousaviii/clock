@@ -1,4 +1,5 @@
 import React from 'react';
+import DefaultLayout from '../layouts/default-layout';
 
 function Stopwatch() {
   const [time, setTime] = React.useState(0);
@@ -13,7 +14,7 @@ function Stopwatch() {
   }, []);
 
   function start() {
-    if(!isStart) {
+    if (!isStart) {
       updateTime.current = setInterval(() => {
         setTime((prevTime) => prevTime + 1);
       }, 10);
@@ -40,20 +41,20 @@ function Stopwatch() {
     }
 
     time = time.slice(0, time.length - 2) +
-      '.' +
-      time.toString().slice(time.length - 2, time.length);
+        '.' +
+        time.toString().slice(time.length - 2, time.length);
 
     return time;
   }
 
   return (
-    <span>
-      <p>Stopwatch</p>
-      <h4>{timeStyle(time)}</h4>
-      <button onClick={start}>Start</button>
-      <button onClick={stop}>Stop</button>
-      <button onClick={reset}>Reset</button>
-    </span>
+      <DefaultLayout>
+        <p>Stopwatch</p>
+        <h4>{timeStyle(time)}</h4>
+        <button onClick={start}>Start</button>
+        <button onClick={stop}>Stop</button>
+        <button onClick={reset}>Reset</button>
+      </DefaultLayout>
   );
 }
 

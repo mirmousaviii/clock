@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import DefaultLayout from '../layouts/default-layout';
 
 class Counter extends React.Component {
 
@@ -28,35 +29,34 @@ class Counter extends React.Component {
   //   });
   // }
 
-
   state = {
     number: this.props.defaultNumber || 0,
-    counter: 0
-  }
+    counter: 0,
+  };
 
   plus = () => {
     this.setState({
       number: this.state.number + 1,
-      counter: this.state.counter + 1
+      counter: this.state.counter + 1,
     });
-  }
+  };
 
   mines = () => {
     this.setState({
       number: this.state.number - 1,
-      counter: this.state.counter + 1
+      counter: this.state.counter + 1,
     });
-  }
+  };
 
   render() {
     return (
-      <React.Fragment>
-        <h4>Counter</h4>
-        <h4>Number: {this.state.number}</h4>
-        <h4>Counter: {this.state.counter}</h4>
-        <button onClick={this.plus}>+</button>
-        <button onClick={this.mines}>-</button>
-      </React.Fragment>
+        <DefaultLayout>
+          <h4>Counter</h4>
+          <h4>Number: {this.state.number}</h4>
+          <h4>Counter: {this.state.counter}</h4>
+          <button onClick={this.plus}>+</button>
+          <button onClick={this.mines}>-</button>
+        </DefaultLayout>
     );
   }
 }
