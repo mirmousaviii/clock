@@ -20,7 +20,7 @@ function SimpleClock(props) {
   }
 
   return (
-    <h4>{props.label ? (props.label + ' ') : ''}{time}</h4>
+    <p>{props.label ? (props.label + ' ') : ''}{time}</p>
   );
 }
 
