@@ -1,5 +1,5 @@
 import {Layout, Typography} from 'antd';
-import Nav from '../components/Nav';
+import Nav from '../components/nav';
 import routes from '../routes';
 import {Route} from 'react-router-dom';
 

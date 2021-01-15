@@ -1,10 +1,12 @@
 import React from 'react';
-import SimpleClock from '../components/SimpleClock';
+import ProClock from '../components/pro-clock';
 
 function CurrentTime() {
 
   return (
-        <SimpleClock/>
+      <span className='full-size'>
+        <ProClock/>
+      </span>
   );
 }
 

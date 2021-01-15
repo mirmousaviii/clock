@@ -1,18 +1,15 @@
 import React from 'react';
 import ReactMoment from 'react-moment';
 
-
 function ProClock(props) {
 
   return (
-    <span>
-      <h4>
+      <span>
         <ReactMoment
-          format={props.format || "HH:mm:ss"}
-          interval={props.interval || 1000}
+            format={props.format || 'HH:mm:ss'}
+            interval={props.interval || 1000}
         />
-      </h4>
-    </span>
+      </span>
 
   );
 }
