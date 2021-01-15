@@ -1,12 +1,11 @@
 import React from 'react';
 import SimpleClock from '../components/SimpleClock';
-import DefaultLayout from '../layouts/default-layout';
 
-function Home() {
+function CurrentTime() {
 
   return (
         <SimpleClock/>
   );
 }
 
-export default Home;
+export default CurrentTime;

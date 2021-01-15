@@ -1,12 +1,12 @@
-import Home from "./pages/Home";
-import Alarm from "./pages/Alarm";
-import Stopwatch from "./pages/Stopwatch";
-import Timer from "./pages/Timer";
-import WorldTime from "./pages/WorldTime";
-import Counter from "./pages/Counter";
+import CurrentTime from "./pages/current-time";
+import Alarm from "./pages/alarm";
+import Stopwatch from "./pages/stopwatch";
+import Timer from "./pages/timer";
+import WorldTime from "./pages/world-time";
+import Counter from "./pages/counter";
 
 const routes = [
-  {path: '/', component: Home, exact: true},
+  {path: '/', component: CurrentTime, exact: true},
   {path: '/alarm', component: Alarm},
   {path: '/stopwatch', component: Stopwatch},
   {path: '/timer', component: Timer},

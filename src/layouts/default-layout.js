@@ -1,7 +1,7 @@
 import {Layout, Typography} from 'antd';
 import Nav from '../components/Nav';
 import routes from '../routes';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 
 const {Header, Footer, Content} = Layout;
 const {Link} = Typography;
