@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import DefaultLayout from '../layouts/default-layout';
 
 function Timer() {
   const [minute, setMinute] = React.useState(0);

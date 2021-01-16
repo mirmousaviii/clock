@@ -1,5 +1,4 @@
 import React from 'react';
-import DefaultLayout from '../layouts/default-layout';
 
 function Stopwatch() {
   const [time, setTime] = React.useState(0);

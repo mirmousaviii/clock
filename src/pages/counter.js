@@ -1,5 +1,4 @@
 import React from 'react';
-import DefaultLayout from '../layouts/default-layout';
 
 class Counter extends React.Component {
 

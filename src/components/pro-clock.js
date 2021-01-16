@@ -7,6 +7,7 @@ function ProClock(props) {
       <ReactMoment
           format={props.format || 'HH:mm:ss'}
           interval={props.interval || 1000}
+          tz={props.timezone || ''}
       />
   );
 }

@@ -1,19 +1,24 @@
 import React from 'react';
-import {InputNumber} from 'antd';
-import {TimezoneContext} from '../context';
+import {Select} from 'antd';
+import {TimezoneContext} from '../context/timezone';
+import momentTimezone from 'moment-timezone';
 
 function CurrentTime() {
+  const [timezone, setTimezone] = React.useContext(TimezoneContext);
 
-  let Timezone = React.useContext(TimezoneContext);
+  const tzList = momentTimezone.tz.names();
 
-  function onChange(value) {
-    console.log('changed', value);
+  function handleChangeTimezone(value) {
+    setTimezone(value);
   }
 
   return (
       <span>
-        Time Zone: <InputNumber min={-12} max={13} defaultValue={Timezone}
-                                onChange={onChange}/>
+        <Select defaultValue={timezone} onChange={handleChangeTimezone}>
+          {tzList.map((item, index) => (
+              <Select.Option key={index} value={item}>{item}</Select.Option>
+          ))}
+        </Select>
       </span>
   );
 }
