@@ -16,7 +16,7 @@
 }
 
 .timezone {
-    position: fixed;
-    bottom: 70px;
-    right: 20px;
+    position: absolute;
+    bottom: 4rem;
+    right: 1rem;
 }

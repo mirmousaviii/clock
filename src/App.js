@@ -6,7 +6,7 @@ import {ThemeContext, TimezoneContext} from './context';
 function App() {
   return (
       <ThemeContext.Provider value='dark'>
-        <TimezoneContext.Provider value={3}>
+        <TimezoneContext.Provider value={"+3"}>
           <Router>
             <DefaultLayout/>
             {/*  TODO: Add route for auth pages*/}

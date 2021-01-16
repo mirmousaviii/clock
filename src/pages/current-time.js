@@ -1,6 +1,7 @@
 import React from 'react';
 import ProClock from '../components/pro-clock';
 import {TimezoneContext} from '../context';
+import {Typography} from 'antd';
 
 function CurrentTime() {
   let Timezone = React.useContext(TimezoneContext);
@@ -10,7 +11,8 @@ function CurrentTime() {
         <span className='full-size'>
           <ProClock/>
         </span>
-        <p className="timezone">Timezone: {Timezone}</p>
+        <Typography.Title level={4} type="secondary"
+                          className="timezone">[GMT {Timezone}]</Typography.Title>
       </>
   );
 }
