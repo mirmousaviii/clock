@@ -1,5 +1,5 @@
 import React from 'react';
-import {Select} from 'antd';
+import {Select, Form} from 'antd';
 import {TimezoneContext} from '../context/timezone';
 import momentTimezone from 'moment-timezone';
 
@@ -14,11 +14,16 @@ function CurrentTime() {
 
   return (
       <span>
-        <Select defaultValue={timezone} onChange={handleChangeTimezone}>
-          {tzList.map((item, index) => (
-              <Select.Option key={index} value={item}>{item}</Select.Option>
-          ))}
-        </Select>
+        <Form.Item name="timezone" label="Timezone">
+          <Select defaultValue={timezone}
+                  onChange={handleChangeTimezone}
+                  showSearch
+          >
+            {tzList.map((item, index) => (
+                <Select.Option key={index} value={item}>{item}</Select.Option>
+            ))}
+          </Select>
+        </Form.Item>
       </span>
   );
 }

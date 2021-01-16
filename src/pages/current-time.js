@@ -11,7 +11,7 @@ function CurrentTime() {
         <span className='full-size'>
           <ProClock timezone={timezone} interval={1000}/>
         </span>
-        <Typography.Title level={4} type="secondary"
+        <Typography.Title level={5} type="secondary"
                           className="timezone">[Timezone: {timezone}]</Typography.Title>
       </>
   );
