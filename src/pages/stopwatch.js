@@ -1,4 +1,6 @@
 import React from 'react';
+import {Button, Space} from 'antd';
+import {CaretRightOutlined, PauseOutlined, UndoOutlined} from '@ant-design/icons';
 
 function Stopwatch() {
   const [time, setTime] = React.useState(0);
@@ -11,6 +13,14 @@ function Stopwatch() {
       clearInterval(updateTime.current);
     };
   }, []);
+
+  function toggle() {
+    if (isStart) {
+      stop();
+    } else {
+      start();
+    }
+  }
 
   function start() {
     if (!isStart) {
@@ -48,11 +58,25 @@ function Stopwatch() {
 
   return (
       <>
-        <p>Stopwatch</p>
-        <h4>{timeStyle(time)}</h4>
-        <button onClick={start}>Start</button>
-        <button onClick={stop}>Stop</button>
-        <button onClick={reset}>Reset</button>
+        <div className='full-size'>
+          {timeStyle(time)}
+        </div>
+
+        <Space size={-1} className='controller'>
+          <Button
+              size="large"
+              icon={isStart ? <PauseOutlined/> : <CaretRightOutlined/> }
+              type="primary"
+              onClick={toggle}
+          />
+          <Button
+              size="large"
+              type="primary"
+              danger
+              icon={<UndoOutlined />}
+              onClick={reset}
+          />
+        </Space>
       </>
   );
 }
