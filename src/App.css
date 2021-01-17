@@ -4,7 +4,7 @@
 .site-layout-content {
     padding: 24px;
     background: #fff;
-    min-height: calc(100vh - 134px);
+    min-height: calc(100vh - 150px);
 }
 .logo {
     float: left;
@@ -15,8 +15,8 @@
     font-size: 24vw;
 }
 
-.timezone {
+.controller {
     position: absolute;
-    bottom: 4rem;
+    bottom: 5rem;
     right: 1rem;
 }

@@ -7,13 +7,13 @@ function CurrentTime() {
   let [timezone] = React.useContext(TimezoneContext);
 
   return (
-      <>
+      <div>
         <span className='full-size'>
           <ProClock timezone={timezone} interval={1000}/>
         </span>
         <Typography.Title level={5} type="secondary"
-                          className="timezone">[Timezone: {timezone}]</Typography.Title>
-      </>
+                          className="controller">[Timezone: {timezone}]</Typography.Title>
+      </div>
   );
 }
 

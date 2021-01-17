@@ -2,11 +2,12 @@ import {Layout, PageHeader, Button, Space, Typography} from 'antd';
 import routes from '../routes';
 import {Link, Route} from 'react-router-dom';
 import {
-  MoreOutlined,
+  SettingOutlined,
   ClockCircleOutlined,
   FieldTimeOutlined,
-  PoweroffOutlined,
+  PlusCircleOutlined,
 } from '@ant-design/icons';
+import React from 'react';
 
 const {Footer, Content} = Layout;
 
@@ -17,26 +18,23 @@ let DefaultLayout = () => {
         <PageHeader
             className="site-page-header"
             title="Simple Clock"
+            subTitle="With some simple actions"
             extra={
 
               <Space size={3}>
                 <Link to='/'>
-                  <Button key="current" icon={<ClockCircleOutlined/>}>
-                    Clock
-                  </Button>
+                  <Button key="current" icon={<ClockCircleOutlined/>}
+                          size="large"/>
                 </Link>
                 <Link to='/timer'>
-                  <Button key="timer" icon={<FieldTimeOutlined/>}>
-                    Timer
-                  </Button>
+                  <Button key="timer" icon={<FieldTimeOutlined/>} size="large"/>
                 </Link>
                 <Link to='/stopwatch'>
-                  <Button key="stopwatch" icon={<PoweroffOutlined/>}>
-                    Stopwatch
-                  </Button>
+                  <Button key="stopwatch" icon={<PlusCircleOutlined/>}
+                          size="large"/>
                 </Link>
                 <Link to='/setting'>
-                  <Button key="setting" icon={<MoreOutlined/>}/>
+                  <Button key="setting" icon={<SettingOutlined/>} size="large"/>
                 </Link>
               </Space>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Select, Form} from 'antd';
-import {TimezoneContext} from '../context/timezone';
 import momentTimezone from 'moment-timezone';
+import {TimezoneContext} from '../context/timezone';
 
 function CurrentTime() {
   const [timezone, setTimezone] = React.useContext(TimezoneContext);
