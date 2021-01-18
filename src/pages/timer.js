@@ -8,6 +8,7 @@ import {
 
 function Timer() {
   const [time, setTime] = React.useState('00:00:00');
+  const [isStart, setIsStart ] = React.useState(false);
   const countDownInterval = React.useRef();
 
   function onChange(time, timeString) {
@@ -18,11 +19,13 @@ function Timer() {
   }
 
   function start() {
+    setIsStart(true);
     countDownInterval.current = setInterval(() => {
       setTime(
           (prev) => {
             if (prev === '00:00:00') {
               clearInterval(countDownInterval.current);
+              setIsStart(false);
               return '00:00:00';
             }
             return moment(prev, 'HH:mm:ss')
@@ -34,6 +37,7 @@ function Timer() {
   }
 
   function pause() {
+    setIsStart(false);
     clearInterval(countDownInterval.current);
   }
 
@@ -52,16 +56,10 @@ function Timer() {
           />
           <Button
               size="large"
-              icon={<CaretRightOutlined/>}
               type="primary"
-              onClick={start}
-          />
-          <Button
-              size="large"
-              type="primary"
-              danger
-              icon={<PauseOutlined/>}
-              onClick={pause}
+              icon={ isStart ? <PauseOutlined/> : <CaretRightOutlined/>}
+              onClick={isStart ? pause : start}
+              danger={isStart}
           />
         </Space>
 
