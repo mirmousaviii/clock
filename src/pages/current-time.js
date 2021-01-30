@@ -4,7 +4,7 @@ import {Typography} from 'antd';
 import {TimezoneContext} from '../context/timezone';
 
 function CurrentTime() {
-  let [timezone] = React.useContext(TimezoneContext);
+  let timezone = React.useContext(TimezoneContext);
 
   return (
       <div>
