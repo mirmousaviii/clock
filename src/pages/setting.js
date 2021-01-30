@@ -1,12 +1,11 @@
 import React from 'react';
 import {Select, Form} from 'antd';
 import momentTimezone from 'moment-timezone';
-import {TimezoneContext, SetTimezoneContext} from '../context/timezone';
+import {useTimezone, useSetTimezone} from '../context/timezone';
 
 function Setting() {
-  const timezone = React.useContext(TimezoneContext);
-  const setTimezone = React.useContext(SetTimezoneContext);
-
+  const timezone = useTimezone();
+  const setTimezone = useSetTimezone();
   const tzList = momentTimezone.tz.names();
 
   function handleChangeTimezone(value) {
