@@ -10,7 +10,7 @@ function App() {
   return (
       <ThemeProvider>
         <TimezoneProvider>
-          <Router basename="/clock">
+          <Router>
             <DefaultLayout/>
             {/*  TODO: Add route for auth pages*/}
           </Router>
