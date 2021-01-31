@@ -1,11 +1,11 @@
 import React from 'react';
 import {Select, Form} from 'antd';
 import momentTimezone from 'moment-timezone';
-import {TimezoneContext} from '../context/timezone';
+import {useTimezone, useSetTimezone} from '../context/timezone';
 
-function CurrentTime() {
-  const [timezone, setTimezone] = React.useContext(TimezoneContext);
-
+function Setting() {
+  const timezone = useTimezone();
+  const setTimezone = useSetTimezone();
   const tzList = momentTimezone.tz.names();
 
   function handleChangeTimezone(value) {
@@ -13,8 +13,8 @@ function CurrentTime() {
   }
 
   return (
-      <span>
-        <Form.Item name="timezone" label="Timezone">
+      <Form name="setting">
+        <Form.Item label="Timezone">
           <Select defaultValue={timezone}
                   onChange={handleChangeTimezone}
                   showSearch
@@ -24,8 +24,8 @@ function CurrentTime() {
             ))}
           </Select>
         </Form.Item>
-      </span>
+      </Form>
   );
 }
 
-export default CurrentTime;
+export default Setting;
