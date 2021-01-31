@@ -1,10 +1,10 @@
 import React from 'react';
 import ProClock from '../components/pro-clock';
 import {Typography} from 'antd';
-import {TimezoneContext} from '../context/timezone';
+import {useTimezone} from '../context/timezone';
 
 function CurrentTime() {
-  let [timezone] = React.useContext(TimezoneContext);
+  let timezone = useTimezone();
 
   return (
       <div>
