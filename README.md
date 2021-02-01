@@ -39,9 +39,14 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 
 ###TODO:
+- [x] Use Ant design
 - [x] Clock page
 - [x] Timer page 
 - [x] Stopwatch page
 - [x] Config page
 - [x] Add timezone
+- [x] Routing
+- [ ] Load local timezone
 - [ ] Add other them 
+- [ ] Add Shortcut
+- [ ] Cheat sheet

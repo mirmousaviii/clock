@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter as Router} from 'react-router-dom';
+import {HashRouter as Router} from 'react-router-dom';
 import DefaultLayout from './layouts/default-layout';
 import {TimezoneProvider} from './context/timezone';
 import {ThemeProvider} from './context/theme';
