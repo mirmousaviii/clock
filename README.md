@@ -46,6 +46,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - [x] Config page
 - [x] Add timezone
 - [x] Routing
+- [x] Add eslint
+- [ ] Add Prettier
 - [ ] Load local timezone
 - [ ] Add other them 
 - [ ] Add Shortcut
